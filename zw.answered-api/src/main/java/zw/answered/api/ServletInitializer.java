@@ -4,26 +4,30 @@ import javax.servlet.Filter;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * 
+ * @author amushate 27 Sep,2017
+ */
 public class ServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-    @Override
-    protected Class<?>[] getServletConfigClasses() {
-        return new Class[] { WebConfig.class };
-    }
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+		return new Class[] { WebConfig.class };
+	}
 
-    @Override
-    protected String[] getServletMappings() {
-        return new String[] { "/" };
-    }
+	@Override
+	protected String[] getServletMappings() {
+		return new String[] { "/" };
+	}
 
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return null;
-    }
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		return null;
+	}
 
-    @Override
-    protected Filter[] getServletFilters() {
-        return new Filter[]{ new CORSFilter()};
-    }
+	@Override
+	protected Filter[] getServletFilters() {
+		return new Filter[] { new CORSFilter() };
+	}
 
 }

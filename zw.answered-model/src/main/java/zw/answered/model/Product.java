@@ -1,14 +1,18 @@
 package zw.answered.model;
 
+/**
+ * 
+ * @author amushate 27 Sep,2017
+ */
 public class Product {
 
 	private long id;
 	private String name;
 
 	public Product(long id, String name) {
-        this.id = id;
-        this.setName(name);
-    }
+		this.id = id;
+		this.setName(name);
+	}
 
 	public long getId() {
 		return id;
@@ -24,6 +28,6 @@ public class Product {
 
 	public void setName(String name) {
 		this.name = name;
-	}	
-	
+	}
+
 }
